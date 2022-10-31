@@ -1,8 +1,5 @@
-ThisBuild / version := "0.1.0-SNAPSHOT"
+name := "Scala"
 
-ThisBuild / scalaVersion := "2.13.10"
+version := "0.1"
 
-lazy val root = (project in file("."))
-  .settings(
-    name := "hi_world"
-  )
+scalaVersion := "2.13.10"

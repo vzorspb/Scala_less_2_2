@@ -52,9 +52,13 @@ object App {
      val zp = Array(100, 150, 200, 80, 120, 75)
      // средняя зарплата
      val m = mid_zp(zp)
+     println("------------------------------")
+     print("Средняя зарплата:")
      println(m)
      println ("Отклонения зарплаты от среднего: ")
      for (dev<-zp) {
+       print(dev)
+       print("$: ")
        print (((dev-m)/dev*100).round)
        print("%; ")
      }
