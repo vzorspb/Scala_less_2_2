@@ -78,7 +78,10 @@ object App {
      println("Сортировка")
      //сортировка
      zp=zp.sorted
-
+     for (z <- zp) {
+       print (z)
+       print("$ - ")
+     }
      // вставляем элемент в нужную позицию
      val new_zp=130
      zp = zp :+ zp(zp.length-1)
@@ -88,7 +91,8 @@ object App {
        i = i-1
      }
      zp(i)=new_zp
-
+     println()
+     println("Добавляем элемент 130  в нужную позицию")
      for (z <- zp) {
        print (z)
        print("$ - ")
