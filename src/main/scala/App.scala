@@ -1,4 +1,5 @@
 object App {
+  //переворот строки
   def revers (arg:String): String={
     var result = ""
     var i = 0
@@ -8,17 +9,24 @@ object App {
     }
     return result
   }
+  //расчет оклада
   def oklad (year_zp:Double, add:Double, eda:Double):Double={
     var result:Double= 0
     //0.87 - остаток после уплаты налогов
     result = (year_zp*(1+add/100)*0.87/12+eda)
     return result
   }
+  //расчет средней зарплаты
   def mid_zp(zp:Array[Int]):Double ={
     var summ:Double=0
 
     for (s <- zp) summ=summ+s
     return summ/zp.length
+  }
+  //вычисление степени двойки
+  def st2(n:Int): Long ={
+    if(n <= 0) 1
+    else 2 * st2(n-1)
   }
 
    def main(args: Array[String]): Unit={
@@ -63,5 +71,10 @@ object App {
        print("%; ")
      }
      println()
+     //o.      *Попробуйте написать функцию, которая вычисляет значение степени двойки:
+     println("------------------------------")
+     print ("2^16=")
+     println (st2(16))
+     println("------------------------------")
    }
 }
