@@ -4,7 +4,7 @@
 		module="hi_world-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20221031224100"
+		publication="20221115141433"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
