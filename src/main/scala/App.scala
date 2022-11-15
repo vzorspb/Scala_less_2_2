@@ -4,7 +4,7 @@ object App {
     var result = ""
     var i = 0
     while ( {i < arg.length}) {
-      result = arg.charAt(i) + result
+      result = result.patch(0,arg.charAt(i).toString,0)
       i = i+1
     }
     return result
