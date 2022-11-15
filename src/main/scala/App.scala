@@ -29,6 +29,13 @@ object App {
     else 2 * st2(n-1)
   }
 
+  //индексация зарплаты
+  def salaryIndex (zp:Array[Int],index:Double):Array[Double]={
+    var res: Array[Double] = Array()
+    for (zpOld <- zp) res :+= zpOld * index
+    return res
+  }
+
    def main(args: Array[String]): Unit={
 // a.    Напишите программу, которая:
      val str = "Hello, Scala!"
@@ -128,6 +135,14 @@ object App {
      println("------------------------------")
      print ("2^34=")
      println (st2(34))
+     println("------------------------------")
+     val zpInd = salaryIndex(zp,1.07)
+     println ("Зарплата после индексации")
+     for (z <-zpInd) {
+       print(z)
+       print(" ")
+     }
+     println()
      println("------------------------------")
    }
 }
